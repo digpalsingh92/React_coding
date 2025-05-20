@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-.mainDiv{
+.mainDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,8 +13,9 @@
     height: 100vh;
     background-color: rgb(35, 33, 50);
 }
-.card{
-   width: 500px;
+
+.card {
+    width: 500px;
     height: 300px;
     background-color: #383030;
     border-radius: 10px;
@@ -27,44 +28,53 @@
     position: relative;
 
 }
-.card h1{
+
+.card h1 {
     color: #fff;
     font-size: 20px;
     margin-bottom: 20px;
     color: rgb(39, 217, 175);
 }
-.card p{
+
+.card p {
     color: #b6b2b2;
     font-size: 20px;
     margin-bottom: 20px;
     padding: 20px;
     text-align: center;
 }
-.divider{
+
+.divider {
     margin: 20px;
 
 }
-.divider-desktop{
+
+.divider-desktop {
     display: block;
 }
-.divider-mobile{
+
+.divider-mobile {
     display: none;
 }
-.btn{
+
+.btn {
     width: 55px;
     height: 55px;
     background-color: rgb(39, 217, 175);
     position: absolute;
     bottom: -25px;
     border-radius: 50%;
+    display: flex;
     border: none;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 .btn:hover {
     box-shadow: 0 0 20px 5px rgb(39, 217, 175), 0 0 40px 10px rgba(39, 217, 175, 0.5);
     transition: box-shadow 0.3s ease;
 }
+
 @media only screen and (max-width: 500px) {
     .card {
         width: 90vw;
@@ -72,21 +82,25 @@
         padding: 10px;
         height: auto;
     }
+
     .card h1,
     .card p {
         font-size: 16px;
         padding: 10px;
     }
+
     .mainDiv {
         height: auto;
         min-height: 100vh;
         padding: 10px 0;
     }
-    .divider-desktop{
-    display: none;
-}
-.divider-mobile{
-    display: block;
-    margin-bottom: 20px;
-}
+
+    .divider-desktop {
+        display: none;
+    }
+
+    .divider-mobile {
+        display: block;
+        margin-bottom: 20px;
+    }
 }

@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
-import IconDice from "./assets/images/iconDice.svg";
-import PatternDividerDesktop from "./assets/images/pattern-divider-desktop.svg";
-import PatternDividerMobile from "./assets/images/pattern-divider-mobile.svg";
+import { useEffect, useState } from "react";
 import "./App.css";
+import AdviceGenerator from "./components/adviceGenrator";
 
 const App = () => {
   const [advice, setAdvice] = useState({
@@ -28,27 +26,14 @@ const App = () => {
   }, []);
 
   return (
-    <div className="mainDiv">
-      <div className="card">
-        <h1>Advice #{advice.id}</h1>
-        <p>"{advice.advice}"</p>
-        <div className="divider">
-          <img
-            src={PatternDividerDesktop}
-            alt="Divider"
-            className="divider-desktop"
-          />
-          <img
-            src={PatternDividerMobile}
-            alt="Divider"
-            className="divider-mobile"
-          />
-        </div>
-        <button className="btn" onClick={fetchAdvice}>
-          <img src={IconDice} alt="Dice Icon" />
-        </button>
-      </div>
-    </div>
+    <>
+    <AdviceGenerator 
+      fetchAdvice={fetchAdvice} 
+      setAdvice={setAdvice}
+      advice={advice}  
+    />
+    
+    </>
   );
 };
 
